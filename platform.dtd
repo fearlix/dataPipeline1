@@ -1,0 +1,269 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT platform (people,services,activities,feedbacks)>
+<!ATTLIST platform
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT people (requestors*,providers*)>
+<!ATTLIST people
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT services (service*)>
+<!ATTLIST services
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT feedbacks (feedback)+>
+<!ATTLIST feedbacks
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT requestors (requestor*)>
+<!ATTLIST requestors
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT providers (provider*)>
+<!ATTLIST providers
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT service (requestor_id,provider_id,status,orderDate,scheduledStart,scheduledEnd,name,urgencyLevel,
+                   requiredEquipment,cost,category,location,description)>
+<!ATTLIST service
+    xmlns CDATA #FIXED ''
+    service_id CDATA #REQUIRED>
+
+<!ELEMENT feedback (service_activity_id,provider_id,requestor_id,rating,comments?,tags?,date)>
+<!ATTLIST feedback
+    xmlns CDATA #FIXED ''
+    feedbackType CDATA #REQUIRED
+    feedback_id CDATA #REQUIRED>
+
+<!ELEMENT requestor (name,info,address,preferences,emergencyContacts*)>
+<!ATTLIST requestor
+    xmlns CDATA #FIXED ''
+    requestor_id CDATA #REQUIRED>
+
+<!ELEMENT provider (name,role,isCompany,experience,certifications,contactInfo,servicesProvided,activitiesProvided)>
+<!ATTLIST provider
+    xmlns CDATA #FIXED ''
+    provider_id CDATA #REQUIRED>
+
+<!ELEMENT orderDate (#PCDATA)>
+<!ATTLIST orderDate
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT urgencyLevel (#PCDATA)>
+<!ATTLIST urgencyLevel
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT requiredEquipment (#PCDATA)>
+<!ATTLIST requiredEquipment
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT cost (#PCDATA)>
+<!ATTLIST cost
+    xmlns CDATA #FIXED ''
+    currency CDATA #REQUIRED>
+
+<!ELEMENT category (#PCDATA)>
+<!ATTLIST category
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT service_activity_id (#PCDATA)>
+<!ATTLIST service_activity_id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT rating (#PCDATA)>
+<!ATTLIST rating
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT comments (#PCDATA)>
+<!ATTLIST comments
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT tags (tag)+>
+<!ATTLIST tags
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT date (#PCDATA)>
+<!ATTLIST date
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT info (age,medicalNeeds,contact)>
+<!ATTLIST info
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT preferences (language,genderPreference,petTolerance)>
+<!ATTLIST preferences
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT emergencyContacts (contact)+>
+<!ATTLIST emergencyContacts
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT role (#PCDATA)>
+<!ATTLIST role
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT isCompany (#PCDATA)>
+<!ATTLIST isCompany
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT experience (#PCDATA)>
+<!ATTLIST experience
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT certifications (certification)+>
+<!ATTLIST certifications
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT contactInfo (email?,phone?,website?)>
+<!ATTLIST contactInfo
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT servicesProvided (service_id)>
+<!ATTLIST servicesProvided
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT activitiesProvided (activity_id)>
+<!ATTLIST activitiesProvided
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT tag (#PCDATA)>
+<!ATTLIST tag
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT age (#PCDATA)>
+<!ATTLIST age
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT medicalNeeds (#PCDATA)>
+<!ATTLIST medicalNeeds
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT language (#PCDATA)>
+<!ATTLIST language
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT genderPreference (#PCDATA)>
+<!ATTLIST genderPreference
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT petTolerance (#PCDATA)>
+<!ATTLIST petTolerance
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT certification (#PCDATA)>
+<!ATTLIST certification
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT website (#PCDATA)>
+<!ATTLIST website
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT service_id (#PCDATA)>
+<!ATTLIST service_id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT contact ((email|(name,relationship)),phone)>
+<!ATTLIST contact
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT relationship (#PCDATA)>
+<!ATTLIST relationship
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT address (street,city,region,postalCode,country)>
+<!ATTLIST address
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT street (#PCDATA)>
+<!ATTLIST street
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT city (#PCDATA)>
+<!ATTLIST city
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT region (#PCDATA)>
+<!ATTLIST region
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT postalCode (#PCDATA)>
+<!ATTLIST postalCode
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT country (#PCDATA)>
+<!ATTLIST country
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT email (#PCDATA)>
+<!ATTLIST email
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT phone (#PCDATA)>
+<!ATTLIST phone
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT activities (activity*)>
+<!ATTLIST activities
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT activity (name,status,capacity,requestor_ids,provider_id,description,scheduledStart,scheduledEnd,location)>
+<!ATTLIST activity
+    xmlns CDATA #FIXED ''
+    activity_id CDATA #REQUIRED>
+
+<!ELEMENT activity_id (#PCDATA)>
+<!ATTLIST activity_id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT capacity (maxParticipants,currentParticipants)>
+<!ATTLIST capacity
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT requestor_ids (requestor_id)>
+<!ATTLIST requestor_ids
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT maxParticipants (#PCDATA)>
+<!ATTLIST maxParticipants
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT currentParticipants (#PCDATA)>
+<!ATTLIST currentParticipants
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT requestor_id (#PCDATA)>
+<!ATTLIST requestor_id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT provider_id (#PCDATA)>
+<!ATTLIST provider_id
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT status (#PCDATA)>
+<!ATTLIST status
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scheduledStart (#PCDATA)>
+<!ATTLIST scheduledStart
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT scheduledEnd (#PCDATA)>
+<!ATTLIST scheduledEnd
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT location (name,(address|pickUpProvided))>
+<!ATTLIST location
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT pickUpProvided (#PCDATA)>
+<!ATTLIST pickUpProvided
+    xmlns CDATA #FIXED ''>
+
+<!ELEMENT description (#PCDATA)>
+<!ATTLIST description
+    xmlns CDATA #FIXED ''>
