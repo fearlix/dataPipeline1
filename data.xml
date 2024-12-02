@@ -1,0 +1,254 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE platform SYSTEM "http://www.example.org/dtds/example.dtd">
+
+<platform>
+    <!-- People Section -->
+    <people>
+        <!-- Requestors List -->
+        <requestors>
+            <requestor requestor_id="R001">
+                <name>Howard Snyder</name>
+                <info>
+                    <age>68</age>
+                    <medicalNeeds>Diabetes, Mobility Issues</medicalNeeds>
+                    <contact>
+                        <email>johndoe@example.com</email>
+                        <phone>+1234567890</phone>
+                    </contact>
+                </info>
+                <address>
+                    <street>2732 Baker Blvd.</street>
+                    <city>Eugene</city>
+                    <region>OR</region>
+                    <postalCode>97403</postalCode>
+                    <country>USA</country>
+                </address>
+                <preferences>
+                    <language>English</language>
+                    <genderPreference>Male</genderPreference>
+                    <petTolerance>Allergic</petTolerance>
+                </preferences>
+                <emergencyContacts>
+                    <contact>
+                        <name>Elizabeth Snyder</name>
+                        <relationship>Spouse</relationship>
+                        <phone>+11234567890</phone>
+                    </contact>
+                    <contact>
+                        <name>Michael Snyder</name>
+                        <relationship>Son</relationship>
+                        <phone>+19876543210</phone>
+                    </contact>
+                </emergencyContacts>
+            </requestor>
+            <requestor requestor_id="R002">
+                <name>Susan Baker</name>
+                <info>
+                    <age>74</age>
+                    <medicalNeeds>Arthritis</medicalNeeds>
+                    <contact>
+                        <email>susanb@example.com</email>
+                        <phone>+12349998877</phone>
+                    </contact>
+                </info>
+                <address>
+                    <street>405 Pine St.</street>
+                    <city>Eugene</city>
+                    <region>OR</region>
+                    <postalCode>97401</postalCode>
+                    <country>USA</country>
+                </address>
+                <preferences>
+                    <language>Spanish</language>
+                    <genderPreference>Female</genderPreference>
+                    <petTolerance>None</petTolerance>
+                </preferences>
+                <emergencyContacts>
+                    <contact>
+                        <name>John Baker</name>
+                        <relationship>Son</relationship>
+                        <phone>+19876544321</phone>
+                    </contact>
+                </emergencyContacts>
+            </requestor>
+        </requestors>
+
+        <!-- Providers List -->
+        <providers>
+            <provider provider_id="P001">
+                <name>Jane Smith</name>
+                <role>Caregiver</role>
+                <isCompany>false</isCompany>
+                <experience>5 years</experience>
+                <certifications>
+                    <certification>CPR Certified</certification>
+                    <certification>Basic Nursing Care</certification>
+                </certifications>
+                <contactInfo>
+                    <email>janesmith@example.com</email>
+                    <phone>+0987654321</phone>
+                    <website>james.smith@help.com</website>
+                </contactInfo>
+                <servicesProvided>
+                    <service_id>S001</service_id>
+                </servicesProvided>
+                <activitiesProvided>
+                    <activity_id>A001</activity_id>
+                </activitiesProvided>
+            </provider>
+            <provider provider_id="P002">
+                <name>Robert Wilson</name>
+                <role>Physical Therapist</role>
+                <isCompany>false</isCompany>
+                <experience>10 years</experience>
+                <certifications>
+                    <certification>Physical Therapy License</certification>
+                </certifications>
+                <contactInfo>
+                    <email>robertw@example.com</email>
+                    <phone>+1234554321</phone>
+                </contactInfo>
+                <servicesProvided>
+                    <service_id>S002</service_id>
+                </servicesProvided>
+                <activitiesProvided>
+                    <activity_id>A002</activity_id>
+                </activitiesProvided>
+            </provider>
+        </providers>
+    </people>
+
+    <!-- Services Section -->
+    <services>
+        <service service_id="S001">
+            <requestor_id>R001</requestor_id>
+            <provider_id>P001</provider_id>
+            <status>Scheduled</status>
+            <orderDate>2024-11-10T10:00:00-05:00</orderDate>
+            <scheduledStart>2024-11-15T10:00:00-05:00</scheduledStart>
+            <scheduledEnd>2024-11-15T12:00:00-05:00</scheduledEnd>
+            <name>Personal Care Assistance</name>
+            <urgencyLevel>Medium</urgencyLevel>
+            <requiredEquipment>None</requiredEquipment>
+            <cost currency="USD">50.00</cost>
+            <category>Personal Assistance</category>
+            <location>
+                <name>Community Center, Room 5</name>
+                <pickUpProvided>true</pickUpProvided>
+            </location>
+            <description>Assistance with daily personal care tasks.</description>
+        </service>
+        <service service_id="S002">
+            <requestor_id>R002</requestor_id>
+            <provider_id>P002</provider_id>
+            <status>Completed</status>
+            <orderDate>2024-11-01T09:00:00-05:00</orderDate>
+            <scheduledStart>2024-11-03T09:00:00-05:00</scheduledStart>
+            <scheduledEnd>2024-11-03T10:30:00-05:00</scheduledEnd>
+            <name>Physical Therapy Session</name>
+            <urgencyLevel>High</urgencyLevel>
+            <requiredEquipment>Massage Table</requiredEquipment>
+            <cost currency="USD">80.00</cost>
+            <category>Physical Therapy</category>
+            <location>
+                <name>Therapy Clinic, Room 2</name>
+                <pickUpProvided>false</pickUpProvided>
+            </location>
+            <description>Therapeutic exercises to manage arthritis.</description>
+        </service>
+    </services>
+
+    <!-- Activities -->
+    <activities>
+        <activity activity_id="A001">
+            <name>Group Yoga Session</name>
+            <status>Scheduled</status>
+            <capacity>
+                <maxParticipants>10</maxParticipants>
+                <currentParticipants>1</currentParticipants>
+            </capacity>
+            <requestor_ids>
+                <requestor_id>R001</requestor_id>
+            </requestor_ids>
+            <provider_id>P001</provider_id>
+            <description>Light yoga exercises for seniors.</description>
+            <scheduledStart>2024-12-01T09:00:00-05:00</scheduledStart>
+            <scheduledEnd>2024-12-01T10:00:00-05:00</scheduledEnd>
+            <location>
+                <name>Yoga Studio</name>
+                <address>
+                    <street>123 Main St.</street>
+                    <city>Eugene</city>
+                    <region>OR</region>
+                    <postalCode>97403</postalCode>
+                    <country>USA</country>
+                </address>
+            </location>
+        </activity>
+        <activity activity_id="A002">
+            <name>Hydrotherapy Session</name>
+            <status>Completed</status>
+            <capacity>
+                <maxParticipants>5</maxParticipants>
+                <currentParticipants>3</currentParticipants>
+            </capacity>
+            <requestor_ids>
+                <requestor_id>R002</requestor_id>
+            </requestor_ids>
+            <provider_id>P002</provider_id>
+            <description>Warm water therapy for arthritis relief.</description>
+            <scheduledStart>2024-11-20T15:00:00-05:00</scheduledStart>
+            <scheduledEnd>2024-11-20T16:00:00-05:00</scheduledEnd>
+            <location>
+                <name>Hydrotherapy Pool</name>
+                <address>
+                    <street>567 Wellness Blvd.</street>
+                    <city>Eugene</city>
+                    <region>OR</region>
+                    <postalCode>97405</postalCode>
+                    <country>USA</country>
+                </address>
+            </location>
+        </activity>
+    </activities>
+
+    <!-- Feedback Section -->
+    <feedbacks>
+        <feedback feedback_id="F001" feedbackType="Service">
+            <service_activity_id>S001</service_activity_id>
+            <provider_id>P001</provider_id>
+            <requestor_id>R001</requestor_id>
+            <rating>4.8</rating>
+            <comments>Very professional and compassionate service.</comments>
+            <tags>
+                <tag>Professionalism</tag>
+                <tag>Empathy</tag>
+            </tags>
+            <date>2024-11-17T12:00:00-05:00</date>
+        </feedback>
+        <feedback feedback_id="F002" feedbackType="Activity">
+            <service_activity_id>A001</service_activity_id>
+            <provider_id>P001</provider_id>
+            <requestor_id>R001</requestor_id>
+            <rating>4.5</rating>
+            <comments>The yoga session was relaxing and well-organized.</comments>
+            <tags>
+                <tag>Relaxation</tag>
+                <tag>Wellness</tag>
+            </tags>
+            <date>2024-12-02T10:00:00-05:00</date>
+        </feedback>
+        <feedback feedback_id="F003" feedbackType="Service">
+            <service_activity_id>S002</service_activity_id>
+            <provider_id>P002</provider_id>
+            <requestor_id>R002</requestor_id>
+            <rating>5.0</rating>
+            <comments>Excellent therapy session; very effective.</comments>
+            <tags>
+                <tag>Effectiveness</tag>
+                <tag>Care</tag>
+            </tags>
+            <date>2024-11-04T12:00:00-05:00</date>
+        </feedback>
+    </feedbacks>
+</platform>
