@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" indent="yes"/>
+    <!-- This XSLT stylesheet generates an HTML table displaying detailed information for each requestor. It includes their ID, name, contact details, medical needs, preferences (language, gender, pet tolerance), and emergency contacts. The emergency contacts are listed with their name, relationship, and phone number. -->
 
     <xsl:template match="/">
         <html>
