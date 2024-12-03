@@ -1,4 +1,5 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <!-- This XSLT stylesheet transforms XML data to generate an HTML report of upcoming activities for each provider. It displays provider details such as name, role, experience, and contact information, and lists scheduled activities with their details (name, time, location, participants, and description). If no activities are scheduled, a message is displayed.-->
     <!-- Define output method as HTML -->
     <xsl:output method="html" indent="yes"/>
 
