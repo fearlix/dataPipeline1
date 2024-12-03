@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<!-- This XSLT stylesheet transforms XML data into an HTML report showing the total earnings for each provider. It iterates over all providers, calculates the sum of completed service costs for each, and displays the provider's name along with their total earnings.-->
     <xsl:output method="html" indent="yes"/>
 
     <xsl:key name="provider-services" match="service" use="provider_id"/>
