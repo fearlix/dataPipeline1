@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <!-- Specify the output method as HTML -->
     <xsl:output method="html" indent="yes"/>
 
-    <!-- Define a key to group services by provider -->
     <xsl:key name="provider-services" match="service" use="provider_id"/>
 
     <!-- Root template -->
