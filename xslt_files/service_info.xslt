@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html" indent="yes"/>
+<!-- 
+This XSLT stylesheet generates an HTML report displaying service statistics. It lists service details such as the service name, provider, duration (in hours), and associated requestors. The duration is calculated based on the service's start and end times, and the requestors are listed for each service. A table format is used for clear presentation, with CSS styling for better readability.-->
 
     <xsl:template match="/">
         <html>
